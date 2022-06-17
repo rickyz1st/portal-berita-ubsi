@@ -8,7 +8,11 @@
 
     <div class="row">
         <div class="col-lg-6">
-            <?= form_error('berita', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+        <?php if (validation_errors()) : ?>
+            <div class="alert alert-danger" role="alert">
+                <?= validation_errors(); ?>
+            </div>
+            <?php endif; ?>
 
             <?= $this->session->flashdata('message'); ?>
 

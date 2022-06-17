@@ -86,8 +86,8 @@ class Admin extends CI_Controller
         $this->form_validation->set_rules('judul', 'Judul', 'required');
         $this->form_validation->set_rules('gambar', 'Gambar', 'required');
         $this->form_validation->set_rules('isi', 'Isi', 'required');
-        $this->form_validation->set_rules('date_start', 'date_start ', 'required');
-        $this->form_validation->set_rules('date_end', 'date_end', 'required');
+        $this->form_validation->set_rules('date_start', 'Tanggal Mulai', 'required');
+        $this->form_validation->set_rules('date_end', 'Tanggal Selesai', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
